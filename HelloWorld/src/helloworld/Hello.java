@@ -5,7 +5,7 @@ public class Hello {
 		Mob yona = new Chicken();
 		Mob blowy = new Creeper();
 		System.out.println("do not blow my house creeper!");
-		blowy.hitTimes(4);
+		blowy.hitTimes(3);
 		yona.hit();
 	}
 
