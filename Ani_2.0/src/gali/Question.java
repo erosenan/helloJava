@@ -1,7 +1,5 @@
 package gali;
 
-import java.util.Scanner;
-
 public class Question extends Answer {
 
 	private String question;
@@ -15,18 +13,13 @@ public class Question extends Answer {
 	}
 
 	@Override
-	public void play() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println(question);
+	public Answer play() {
 		
-		String answer = sc.next();
-		if (answer.equals("yes")) {
-			ifYes.play();
-		} else if (answer.equals("no")) {
-			ifNo.play();
+		if (askb(question)) {
+			ifYes = ifYes.play();
 		} else {
-			System.out.println("poop");
+			ifNo = ifNo.play();
 		}
+		return this;
 	}
-
 }
