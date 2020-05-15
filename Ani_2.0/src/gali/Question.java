@@ -13,12 +13,12 @@ public class Question extends Answer {
 	}
 
 	@Override
-	public Answer play() {
+	public Answer play(IUser user) {
 		
 		if (askb(question)) {
-			ifYes = ifYes.play();
+			ifYes = ifYes.play(user);
 		} else {
-			ifNo = ifNo.play();
+			ifNo = ifNo.play(user);
 		}
 		return this;
 	}

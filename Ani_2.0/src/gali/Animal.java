@@ -14,10 +14,10 @@ public class Animal extends Answer {
 	}
 
 	@Override
-	public Answer play() {
+	public Answer play(IUser user) {
 		
-		if (askb("Is it a " + name + "?")) {
-			System.out.println("I win!!");
+		if (user.askb("Is it a " + name + "?")) {
+			user.print("I win!!");
 			return this;
 		} else {
 			Animal animal = new Animal(asko("What animal did you think about?"));

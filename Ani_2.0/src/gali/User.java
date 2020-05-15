@@ -1,13 +1,11 @@
 package gali;
 
-import java.io.Serializable;
 import java.util.Scanner;
 
-public abstract class Answer implements Serializable {
+public class User implements IUser {
 
-	public abstract Answer play(IUser user);
-	
-	public static boolean askb(String qta) {
+	@Override
+	public boolean askb(String qta) {
 		
 		Scanner sc = new Scanner(System.in);
 		while (true) {
@@ -24,16 +22,12 @@ public abstract class Answer implements Serializable {
 			}
 		}
 		
+
 	}
-	
-	public static String asko(String qta) {
-			
-		Scanner sc = new Scanner(System.in);
-	
-		System.out.println(qta);
-		String ans = sc.nextLine();
-		
-		return ans;
+
+	@Override
+	public void print(String string) {
+		System.out.println(string);
 	}
-		
+
 }
